@@ -1,0 +1,32 @@
+*{
+    margin: 20px 0;
+    padding: 0;
+}
+body{
+    background: grey;
+    color: azure;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(60, 49, 49);
+    border-bottom: 2px solid #2c2c2c;
+    padding: 20px 50px;
+    border-radius: 5px;    
+}
+a{
+    text-decoration: none;
+    color: #cb2222;
+}
+header a{
+    margin-left: 20px;
+}
+a:hover{
+    text-decoration: underline;
+}
+h1{
+    margin-left: 20px;
+}
+.container p{
+    margin-left: 10px;
+}
