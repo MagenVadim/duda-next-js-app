@@ -42,5 +42,6 @@ a:hover{
     margin-bottom: 10px;
 }
 .post a{
-    color: #5dbd47;
+    color: rgb(121, 22, 22);
+    font-weight: 600;
 }

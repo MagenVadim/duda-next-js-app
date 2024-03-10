@@ -1,4 +1,12 @@
-import Link from "next/link";
+import PostID from "@/app/components/PostID"
+
+export async function generateMetadata({params, searchParams}){
+  const post = await fetchData(params.id)
+  return{
+    title: post.title,
+    description: post.body
+  }
+}
 
 async function fetchData(id){
   const res = await fetch('https://jsonplaceholder.typicode.com/posts/' + id);
@@ -8,16 +16,15 @@ async function fetchData(id){
 
 
 const Post = async ({params: {id}}) => {
-
   const res = await fetchData(id)
 
   return (
-    <div>
-      <Link href={'/'}>Home</Link><br />
-      <h2>{res.title}</h2>
-      <p>{res.body}</p>
-      <strong>Author ID: {res.userId}</strong>
-    </div>
+    <PostID 
+       key={res.userId}
+       title={res.title}
+       body={res.body}
+       userID={res.userId}
+    />
   )
 }
 

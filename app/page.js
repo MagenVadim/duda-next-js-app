@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Post from "./components/Post"
 
 async function fetchData(){
